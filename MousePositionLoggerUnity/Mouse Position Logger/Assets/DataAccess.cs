@@ -12,30 +12,18 @@ public class DataAccess : MonoBehaviour
     public TextMeshProUGUI getText;
     public TextMeshProUGUI hrText;
     public string url = "https://localhost:44325/MouseData";
-    public string hrUrl = "https://localhost:44325/HRData";
+    //public string hrUrl = "https://localhost:44325/HRData";
     //public string rrUrl = "https://localhost:44325/HRData";
 
     public int entryID = 0;
     public float mousX;
     public float mousY;
 
-    //public int hrDataId = 0;
-
-
-    public int userId = 0;
-    public string rawTime = DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffff");
-    public double timestamp = 0;
-    public int heartrate = 99;
-    public int maxHeartrate = 52;
-    public int exertionScore = 2;
-    public string intensity = "low";
-    public double meanHR = 52.0215;
-    public double ibi = 2.021;
-
     public void PostData()
     {
         float mousX = Input.mousePosition.x;
         float mousY = Input.mousePosition.y;
+
 
         //users
         string json = "{" +
